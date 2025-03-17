@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Calculator.Operations
 {
-    class Sine
+    public class Sine : IOperation
     {
+        public double Execute(double a, double b)
+        {
+            throw new NotImplementedException("Sine requires only one input");
+        }
+        public double Execute(double a)
+        {
+            return Math.Sin(a);
+        }
     }
+
+
 }

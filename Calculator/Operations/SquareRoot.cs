@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Calculator.Operations
 {
-    public class Exponentiation : IOperation
+    public class SquareRoot : IOperation
     {
         double IOperation.Execute(double a)
         {
-            throw new NotImplementedException("Exponentiation is not possible with one variable");
+            if (a < 0)
+                throw new ArgumentException("Cannot take square root of negative number");
+            return Math.Sqrt(a);
         }
 
         double IOperation.Execute(double a, double b)
         {
-            return Math.Pow(a, b);
+            throw new NotImplementedException("Square root requires only one input ");
         }
     }
 }

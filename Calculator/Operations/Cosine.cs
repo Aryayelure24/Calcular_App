@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Calculator.Operations
 {
-    class Cosine
+    public class Cosine : IOperation
     {
+        public double Execute(double a, double b)
+        {
+            throw new NotImplementedException("Cosine requires only one input");
+        }
+        public double Execute(double a)
+        {
+            return Math.Cos(a);
+        }
     }
 }
